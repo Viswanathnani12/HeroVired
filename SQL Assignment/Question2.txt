@@ -1,0 +1,46 @@
+1) Create a database name - “Football”.
+ create database Football;
+
+2) Create a table name - “Football Venue” 
+create table FootballVenue(
+	venue_id number(10),
+	venue_name varchar2(30),
+	city_id number(10),
+	capacity number(10));
+
+3) Data Insertion:
+
+insert into FootballVenue values(201,'Argentina',101,200000);
+insert into FootballVenue values(331,'France',2211,400000);
+insert into FootballVenue values(222,'Brazil',1121,500000);
+insert into FootballVenue values(662,'Portugal',8281,10000);
+nsert into FootballVenue values(122,'Spain',9001,600000);
+insert into FootballVenue values(542,'Canada',891,700000);
+insert into FootballVenue values(342,'Mexico',191,80000);
+insert into FootballVenue values(677,'Corotia',1211,80000);
+insert into FootballVenue values(47,'Corotia',1921,40000);
+insert into FootballVenue values(4636,'Belgium',1001,80000);
+
+Output:
+  VENUE_ID VENUE_NAME                        CITY_ID   CAPACITY
+---------- ------------------------------ ---------- ----------
+       201 Argentina                             101     200000
+       331 France                               2211     400000
+       222 Brazil                               1121     500000
+       662 Portugal                             8281      10000
+       122 Spain                                9001     600000
+       542 Canada                                891     700000
+       342 Mexico                                191      80000
+       677 Corotia                              1211      80000
+        47 Corotia                              1921      40000
+      4636 Belgium                              1001      80000
+
+4) Count the number of venues of the football world cup
+query: select COUNT(venue_id) from FootballVenue;
+
+5) List all the venue names and capacities in the format of “Location” and “Volume”	
+query: select venue_name as Location, capacity as Volume from FootballVenue;
+
+6) Delete all the details where venue_name is equal to “Australia”.
+query:  delete from Footballvenue
+ 	where venue_name='Australia';

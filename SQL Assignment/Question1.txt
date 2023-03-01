@@ -1,0 +1,36 @@
+1) Create a database name "Employee".
+ create database Employee;
+
+2) 
+create table EmployeeDetails(
+	Emp_id number(10),
+	Emp_name varchar2(30),
+	Job_name varchar2(30),
+	Manager_id number(10),
+	Hire_date date,
+	Salary number(10),
+	Dept_id number(10));
+
+3) Data Insertion:
+
+insert into EmployeeDetails values(1,'Viswanath','Manager',21,'12-APR-20',200000,12);
+insert into EmployeeDetails values(2,'Surya','Devoloper',12,'21-APR-20',2000,112);
+insert into EmployeeDetails values(3,'Raj','SDE',22,'22-APR-20',100000,222);
+insert into EmployeeDetails values(4,'Kumar','SDE',3,'22-JAN-20',1000,2322);
+insert into EmployeeDetails values(5,'GG','Designer',3,'22-JAN-20',10020,2122);
+insert into EmployeeDetails values(6,'Chinni','Designer',7,'10-FEB-20',11020,2002);
+insert into EmployeeDetails values(7,'Harish','Devoloper',88,'10-FEB-20',11023,22);
+insert into EmployeeDetails values(8,'Kalyan','Devoloper',18,'10-JUL-20',21288,212);
+insert into EmployeeDetails values(9,'Ram','Devoloper',118,'10-MAY-20',5288,595);
+insert into EmployeeDetails values(10,'Ravi','Manager',138,'10-DEC-20',52118,795);
+
+4) Find the salaries of all the employees from the “Employee Details” table.
+query: select Salary from EmployeeDetails;
+
+5) Find the unique designations of the employees from the table.	
+query: select UNIQUE(Job_name) from EmployeeDetails;
+
+6) Change the salary where the emp_name is “Raj”.
+query:  update EmployeeDetails
+  	set Salary=20300
+  	where Emp_name='Raj';
