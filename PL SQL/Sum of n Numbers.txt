@@ -1,0 +1,13 @@
+declare
+n number;
+res number;
+begin
+n:=20;
+res:=0;
+for i in 1..n
+loop
+res:=res+i;
+end loop;
+dbms_output.put_line('Sum Upto ' ||n|| ' Numbers= '||res);
+end;
+/

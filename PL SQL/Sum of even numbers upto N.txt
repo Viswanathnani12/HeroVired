@@ -1,0 +1,15 @@
+declare
+n number;
+res number;
+begin
+n:=30;
+res:=0;
+for i in 1..n
+loop
+if (mod(i,2)=0) then
+res:=res+i;
+end if;
+end loop;
+dbms_output.put_line('Sum of even numbers upto '||n||' = '||res);
+end;
+/
